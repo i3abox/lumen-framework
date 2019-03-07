@@ -1,13 +1,13 @@
 <?php
 
-namespace Laravel\Lumen;
+namespace I3A\Lumen;
 
 use RuntimeException;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Log\LogManager;
 use Illuminate\Support\Composer;
-use Laravel\Lumen\Routing\Router;
+use I3A\Lumen\Routing\Router;
 use Illuminate\Container\Container;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Facade;
@@ -74,7 +74,7 @@ class Application extends Container
     /**
      * The Router instance.
      *
-     * @var \Laravel\Lumen\Routing\Router
+     * @var \I3A\Lumen\Routing\Router
      */
     public $router;
 
@@ -575,18 +575,6 @@ class Application extends Container
     }
 
     /**
-     * Register container bindings for the application.
-     *
-     * @return void
-     */
-    protected function registerViewBindings()
-    {
-        $this->singleton('view', function () {
-            return $this->loadComponent('view', 'Illuminate\View\ViewServiceProvider');
-        });
-    }
-
-    /**
      * Configure and load the given component and provider.
      *
      * @param  string  $config
@@ -825,7 +813,7 @@ class Application extends Container
         $this->configure('database');
 
         $this->register('Illuminate\Database\MigrationServiceProvider');
-        $this->register('Laravel\Lumen\Console\ConsoleServiceProvider');
+        $this->register('I3A\Lumen\Console\ConsoleServiceProvider');
     }
 
     /**
@@ -904,11 +892,10 @@ class Application extends Container
             'Illuminate\Contracts\Queue\Factory' => 'queue',
             'Illuminate\Contracts\Queue\Queue' => 'queue.connection',
             'request' => 'Illuminate\Http\Request',
-            'Laravel\Lumen\Routing\Router' => 'router',
+            'I3A\Lumen\Routing\Router' => 'router',
             'Illuminate\Contracts\Translation\Translator' => 'translator',
-            'Laravel\Lumen\Routing\UrlGenerator' => 'url',
+            'I3A\Lumen\Routing\UrlGenerator' => 'url',
             'Illuminate\Contracts\Validation\Factory' => 'validator',
-            'Illuminate\Contracts\View\Factory' => 'view',
         ];
     }
 
@@ -955,8 +942,6 @@ class Application extends Container
         'translator' => 'registerTranslationBindings',
         'url' => 'registerUrlGeneratorBindings',
         'validator' => 'registerValidatorBindings',
-        'Illuminate\Contracts\Validation\Factory' => 'registerValidatorBindings',
-        'view' => 'registerViewBindings',
-        'Illuminate\Contracts\View\Factory' => 'registerViewBindings',
+        'Illuminate\Contracts\Validation\Factory' => 'registerValidatorBindings'
     ];
 }

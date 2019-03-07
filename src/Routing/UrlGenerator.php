@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravel\Lumen\Routing;
+namespace I3A\Lumen\Routing;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use Laravel\Lumen\Application;
+use I3A\Lumen\Application;
 use Illuminate\Contracts\Routing\UrlRoutable;
 
 class UrlGenerator
@@ -12,7 +12,7 @@ class UrlGenerator
     /**
      * The application instance.
      *
-     * @var \Laravel\Lumen\Application
+     * @var \I3A\Lumen\Application
      */
     protected $app;
 
@@ -47,7 +47,7 @@ class UrlGenerator
     /**
      * Create a new URL redirector instance.
      *
-     * @param  \Laravel\Lumen\Application  $app
+     * @param  \I3A\Lumen\Application  $app
      * @return void
      */
     public function __construct(Application $app)

@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Response;
 use PHPUnit\Framework\TestCase;
-use Laravel\Lumen\Http\ResponseFactory;
+use I3A\Lumen\Http\ResponseFactory;
 
 class ResponseFactoryTest extends TestCase
 {

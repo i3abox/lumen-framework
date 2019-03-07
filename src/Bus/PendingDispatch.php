@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Lumen\Bus;
+namespace I3A\Lumen\Bus;
 
 use Illuminate\Contracts\Bus\Dispatcher;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Laravel\Lumen\Http;
+namespace I3A\Lumen\Http;
 
-use Laravel\Lumen\Application;
+use I3A\Lumen\Application;
 use Illuminate\Http\RedirectResponse;
 
 class Redirector

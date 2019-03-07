@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Lumen\Bootstrap;
+namespace I3A\Lumen\Bootstrap;
 
 use Dotenv\Dotenv;
 use Dotenv\Environment\DotenvFactory;

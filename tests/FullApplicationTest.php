@@ -1,8 +1,8 @@
 <?php
 
 use Mockery as m;
-use Laravel\Lumen\Application;
-use Laravel\Lumen\Http\Request;
+use I3A\Lumen\Application;
+use I3A\Lumen\Http\Request;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
@@ -230,7 +230,7 @@ class FullApplicationTest extends TestCase
     public function testNotFoundResponse()
     {
         $app = new Application;
-        $app->instance('Illuminate\Contracts\Debug\ExceptionHandler', $mock = m::mock('Laravel\Lumen\Exceptions\Handler[report]'));
+        $app->instance('Illuminate\Contracts\Debug\ExceptionHandler', $mock = m::mock('I3A\Lumen\Exceptions\Handler[report]'));
         $mock->shouldIgnoreMissing();
 
         $app->router->get('/', function () {
@@ -245,7 +245,7 @@ class FullApplicationTest extends TestCase
     public function testMethodNotAllowedResponse()
     {
         $app = new Application;
-        $app->instance('Illuminate\Contracts\Debug\ExceptionHandler', $mock = m::mock('Laravel\Lumen\Exceptions\Handler[report]'));
+        $app->instance('Illuminate\Contracts\Debug\ExceptionHandler', $mock = m::mock('I3A\Lumen\Exceptions\Handler[report]'));
         $mock->shouldIgnoreMissing();
 
         $app->router->post('/', function () {
@@ -275,7 +275,7 @@ class FullApplicationTest extends TestCase
     public function testUncaughtExceptionResponse()
     {
         $app = new Application;
-        $app->instance('Illuminate\Contracts\Debug\ExceptionHandler', $mock = m::mock('Laravel\Lumen\Exceptions\Handler[report]'));
+        $app->instance('Illuminate\Contracts\Debug\ExceptionHandler', $mock = m::mock('I3A\Lumen\Exceptions\Handler[report]'));
         $mock->shouldIgnoreMissing();
 
         $app->router->get('/', function () {
@@ -781,7 +781,7 @@ class LumenTestController
     }
 }
 
-class LumenTestControllerWithMiddleware extends Laravel\Lumen\Routing\Controller
+class LumenTestControllerWithMiddleware extends I3A\Lumen\Routing\Controller
 {
     public function __construct(LumenTestService $service)
     {

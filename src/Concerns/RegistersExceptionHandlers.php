@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Lumen\Concerns;
+namespace I3A\Lumen\Concerns;
 
 use Error;
 use ErrorException;
@@ -138,7 +138,7 @@ trait RegistersExceptionHandlers
         if ($this->bound('Illuminate\Contracts\Debug\ExceptionHandler')) {
             return $this->make('Illuminate\Contracts\Debug\ExceptionHandler');
         } else {
-            return $this->make('Laravel\Lumen\Exceptions\Handler');
+            return $this->make('I3A\Lumen\Exceptions\Handler');
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Lumen\Providers;
+namespace I3A\Lumen\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

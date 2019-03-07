@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Lumen\Testing;
+namespace I3A\Lumen\Testing;
 
 use Mockery;
 use Exception;
@@ -15,7 +15,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * The application instance.
      *
-     * @var \Laravel\Lumen\Application
+     * @var \I3A\Lumen\Application
      */
     protected $app;
 

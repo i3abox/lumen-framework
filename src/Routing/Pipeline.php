@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Lumen\Routing;
+namespace I3A\Lumen\Routing;
 
 use Exception;
 use Throwable;

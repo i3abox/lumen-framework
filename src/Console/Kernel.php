@@ -1,12 +1,12 @@
 <?php
 
-namespace Laravel\Lumen\Console;
+namespace I3A\Lumen\Console;
 
 use Exception;
 use Throwable;
 use RuntimeException;
 use Illuminate\Http\Request;
-use Laravel\Lumen\Application;
+use I3A\Lumen\Application;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Console\Application as Artisan;
 use Illuminate\Contracts\Console\Kernel as KernelContract;
@@ -17,7 +17,7 @@ class Kernel implements KernelContract
     /**
      * The application implementation.
      *
-     * @var \Laravel\Lumen\Application
+     * @var \I3A\Lumen\Application
      */
     protected $app;
 
@@ -45,7 +45,7 @@ class Kernel implements KernelContract
     /**
      * Create a new console kernel instance.
      *
-     * @param  \Laravel\Lumen\Application  $app
+     * @param  \I3A\Lumen\Application  $app
      * @return void
      */
     public function __construct(Application $app)

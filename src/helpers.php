@@ -3,7 +3,7 @@
 use PhpOption\Option;
 use Illuminate\Container\Container;
 use Dotenv\Environment\DotenvFactory;
-use Laravel\Lumen\Bus\PendingDispatch;
+use I3A\Lumen\Bus\PendingDispatch;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Dotenv\Environment\Adapter\EnvConstAdapter;
 use Dotenv\Environment\Adapter\ServerConstAdapter;
@@ -32,7 +32,7 @@ if (! function_exists('app')) {
      *
      * @param  string|null  $make
      * @param  array  $parameters
-     * @return mixed|\Laravel\Lumen\Application
+     * @return mixed|\I3A\Lumen\Application
      */
     function app($make = null, array $parameters = [])
     {
@@ -250,11 +250,11 @@ if (! function_exists('redirect')) {
      * @param  int  $status
      * @param  array  $headers
      * @param  bool|null  $secure
-     * @return \Laravel\Lumen\Http\Redirector|\Illuminate\Http\RedirectResponse
+     * @return \I3A\Lumen\Http\Redirector|\Illuminate\Http\RedirectResponse
      */
     function redirect($to = null, $status = 302, $headers = [], $secure = null)
     {
-        $redirector = new Laravel\Lumen\Http\Redirector(app());
+        $redirector = new I3A\Lumen\Http\Redirector(app());
 
         if (is_null($to)) {
             return $redirector;
@@ -284,11 +284,11 @@ if (! function_exists('response')) {
      * @param  string  $content
      * @param  int     $status
      * @param  array   $headers
-     * @return \Illuminate\Http\Response|\Laravel\Lumen\Http\ResponseFactory
+     * @return \Illuminate\Http\Response|\I3A\Lumen\Http\ResponseFactory
      */
     function response($content = '', $status = 200, array $headers = [])
     {
-        $factory = new Laravel\Lumen\Http\ResponseFactory;
+        $factory = new I3A\Lumen\Http\ResponseFactory;
 
         if (func_num_args() === 0) {
             return $factory;
@@ -410,26 +410,5 @@ if (! function_exists('validator')) {
         }
 
         return $factory->make($data, $rules, $messages, $customAttributes);
-    }
-}
-
-if (! function_exists('view')) {
-    /**
-     * Get the evaluated view contents for the given view.
-     *
-     * @param  string  $view
-     * @param  array  $data
-     * @param  array  $mergeData
-     * @return \Illuminate\View\View
-     */
-    function view($view = null, $data = [], $mergeData = [])
-    {
-        $factory = app('view');
-
-        if (func_num_args() === 0) {
-            return $factory;
-        }
-
-        return $factory->make($view, $data, $mergeData);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Lumen\Console;
+namespace I3A\Lumen\Console;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Queue\Console\TableCommand;

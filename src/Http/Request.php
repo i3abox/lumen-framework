@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Lumen\Http;
+namespace I3A\Lumen\Http;
 
 use RuntimeException;
 use Illuminate\Support\Arr;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Lumen\Concerns;
+namespace I3A\Lumen\Concerns;
 
 use Closure;
 use Throwable;
@@ -9,12 +9,12 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Laravel\Lumen\Routing\Pipeline;
+use I3A\Lumen\Routing\Pipeline;
 use Illuminate\Contracts\Support\Responsable;
-use Laravel\Lumen\Http\Request as LumenRequest;
-use Laravel\Lumen\Routing\Closure as RoutingClosure;
+use I3A\Lumen\Http\Request as LumenRequest;
+use I3A\Lumen\Routing\Closure as RoutingClosure;
 use Illuminate\Http\Exceptions\HttpResponseException;
-use Laravel\Lumen\Routing\Controller as LumenController;
+use I3A\Lumen\Routing\Controller as LumenController;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
