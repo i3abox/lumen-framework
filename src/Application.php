@@ -360,7 +360,7 @@ class Application extends Container
             return $this->loadComponent(
                 'database', [
                     'Illuminate\Database\DatabaseServiceProvider',
-                    'Illuminate\Pagination\PaginationServiceProvider',
+                    'I3A\Lumen\Providers\PaginationServiceProvider',
                 ], 'db'
             );
         });
