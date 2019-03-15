@@ -84,6 +84,16 @@ trait RoutesRequests
     }
 
     /**
+     * get route middleware
+     *
+     * @return array
+     */
+    public function getRouteMiddleware()
+    {
+        return $this->routeMiddleware;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function handle(SymfonyRequest $request)
