@@ -133,7 +133,7 @@ class Application extends Container
      */
     public function version()
     {
-        return 'Lumen (5.8.0) (Laravel Components 5.8.*)';
+        return 'Lumen (5.8.4) (Laravel Components 5.8.*)';
     }
 
     /**
@@ -887,6 +887,7 @@ class Application extends Container
             'Illuminate\Database\DatabaseManager' => 'db',
             'Illuminate\Contracts\Encryption\Encrypter' => 'encrypter',
             'Illuminate\Contracts\Events\Dispatcher' => 'events',
+            'Illuminate\Contracts\Filesystem\Factory' => 'filesystem',
             'Illuminate\Contracts\Hashing\Hasher' => 'hash',
             'log' => 'Psr\Log\LoggerInterface',
             'Illuminate\Contracts\Queue\Factory' => 'queue',
